@@ -7,6 +7,7 @@
 - 新增 v0.3.1 发行说明和纸质版校对清单，为 GitHub Release、ZIP 包和出版前检查提供统一依据。
 - 新增 v0.3.1 发布执行手册，明确 PDF 生成、校验、ZIP 打包、GitHub 推送和 Release 创建顺序。
 - 新增 `蓝桥杯FPGA竞赛教程_Obsidian版.md` 单文件教程，支持 Obsidian YAML 属性、标签、目录锚点、callout 提醒块、题目复盘模板和高频检索关键词。
+- 新增 `scripts/validate_release_v0_3_1.py`，用于检查 PDF、Obsidian Markdown、发布文档和 ZIP 包完整性。
 
 本项目按语义化版本管理：`主版本.次版本.修订版本`。
 

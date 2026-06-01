@@ -8,6 +8,7 @@
 - 保留 v0.3.0 的深色代码块、章节侧边装饰、PDF 书签和元数据。
 - 保留完整真题/模拟题扫描题面嵌入策略，优先保证赛场纸质阅读时题面完整。
 - 新增 Obsidian 单文件教程版，便于本地 vault 阅读、复制笔记、打标签、题目复盘和快速检索关键词。
+- 新增 v0.3.1 发布验收脚本，覆盖 PDF 文本、页脚、关键词、Obsidian 文件和 ZIP 完整性检查。
 
 ## 建议随 ZIP 发布的文件
 
@@ -18,6 +19,7 @@
 - `RELEASE_NOTES_v0.3.1.md`
 - `PRINT_QA_v0.3.1.md`
 - `scripts/generate_textbook_v3.py`
+- `scripts/validate_release_v0_3_1.py`
 - `Aix_tools/generate_textbook_v3.py`
 
 ## 发布前必须验证

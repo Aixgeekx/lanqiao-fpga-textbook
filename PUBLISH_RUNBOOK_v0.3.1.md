@@ -30,6 +30,14 @@ python scripts/generate_textbook_v3.py
 ## 3. 人工与脚本校验
 
 ```powershell
+python scripts/validate_release_v0_3_1.py --skip-zip
+```
+
+脚本会检查 PDF 页数、可抽取文字长度、核心知识点关键词、页脚“当前页 / 总页数”、Obsidian 教程文件和发布说明文件。
+
+也可以临时执行下面的最小抽查脚本：
+
+```powershell
 @'
 from pathlib import Path
 from pypdf import PdfReader
@@ -66,6 +74,12 @@ $releaseFiles = @(
   'results'
 )
 Compress-Archive -Force -Path $releaseFiles -DestinationPath results/lanqiao-fpga-textbook-v0.3.1.zip
+```
+
+打包后执行完整校验：
+
+```powershell
+python scripts/validate_release_v0_3_1.py
 ```
 
 ## 5. 推送 GitHub
