@@ -10,6 +10,7 @@
 - Obsidian 教程补充 vault 推荐结构和 PDF 嵌入示例，方便将 PDF、复盘笔记和上板记录统一管理。
 - 新增 `蓝桥杯FPGA真题复盘_Obsidian索引.md`，为 7 份真题/模拟题提供 Obsidian 复盘入口和统一检查清单。
 - 新增 `scripts/validate_release_v0_3_1.py`，用于检查 PDF、Obsidian Markdown、发布文档和 ZIP 包完整性。
+- 新增 `README.md`，作为本地 PDF、Obsidian Markdown、校验脚本和 ZIP 流程的统一入口。
 
 本项目按语义化版本管理：`主版本.次版本.修订版本`。
 

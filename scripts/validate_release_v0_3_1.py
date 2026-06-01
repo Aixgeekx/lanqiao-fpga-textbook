@@ -16,6 +16,7 @@ OBSIDIAN_MD = ROOT / "蓝桥杯FPGA竞赛教程_Obsidian版.md"
 EXAM_MD = ROOT / "蓝桥杯FPGA真题复盘_Obsidian索引.md"
 
 REQUIRED_DOCS = [
+    ROOT / "README.md",
     ROOT / "CHANGELOG.md",
     ROOT / "RELEASE_NOTES_v0.3.1.md",
     ROOT / "PRINT_QA_v0.3.1.md",
@@ -119,6 +120,7 @@ def validate_zip(zip_path: Path) -> None:
             fail(f"ZIP corruption at member: {bad}")
         names = set(zf.namelist())
     expected = [
+        "README.md",
         "CHANGELOG.md",
         "RELEASE_NOTES_v0.3.1.md",
         "PRINT_QA_v0.3.1.md",

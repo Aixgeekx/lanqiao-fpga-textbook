@@ -26,6 +26,7 @@
 ## 发布检查
 
 - `CHANGELOG.md` 已记录本次变化。
+- `README.md` 已说明 PDF、Obsidian Markdown、本地生成和校验流程。
 - `蓝桥杯FPGA竞赛教程_Obsidian版.md` 已纳入 ZIP 包，能在 Obsidian 中显示 YAML 属性、目录锚点、callout、题目复盘模板和检索关键词，且说明完整题面以 PDF 为准。
 - `蓝桥杯FPGA真题复盘_Obsidian索引.md` 已纳入 ZIP 包，覆盖 7 份真题/模拟题复盘入口。
 - `RELEASE_NOTES_v0.3.1.md` 与 Release 页面描述一致。

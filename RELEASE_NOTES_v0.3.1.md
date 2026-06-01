@@ -10,6 +10,7 @@
 - 新增 Obsidian 单文件教程版，便于本地 vault 阅读、复制笔记、打标签、题目复盘和快速检索关键词。
 - Obsidian 教程包含 vault 推荐结构和 PDF 嵌入示例，便于把教材、复盘和上板记录放在同一知识库。
 - 新增 v0.3.1 发布验收脚本，覆盖 PDF 文本、页脚、关键词、Obsidian 文件和 ZIP 完整性检查。
+- 新增 README 入口文档，汇总 PDF、Obsidian Markdown、本地生成和校验方法。
 
 ## 建议随 ZIP 发布的文件
 
