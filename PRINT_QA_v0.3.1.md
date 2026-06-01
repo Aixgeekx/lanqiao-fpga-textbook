@@ -27,6 +27,7 @@
 
 - `CHANGELOG.md` 已记录本次变化。
 - `蓝桥杯FPGA竞赛教程_Obsidian版.md` 已纳入 ZIP 包，能在 Obsidian 中显示 YAML 属性、目录锚点、callout、题目复盘模板和检索关键词，且说明完整题面以 PDF 为准。
+- `蓝桥杯FPGA真题复盘_Obsidian索引.md` 已纳入 ZIP 包，覆盖 7 份真题/模拟题复盘入口。
 - `RELEASE_NOTES_v0.3.1.md` 与 Release 页面描述一致。
 - 发布前必须执行并通过 `python scripts/validate_release_v0_3_1.py`。
 - ZIP 包使用 ASCII 版本文件名，避免 GitHub Release 资产名规整中文。

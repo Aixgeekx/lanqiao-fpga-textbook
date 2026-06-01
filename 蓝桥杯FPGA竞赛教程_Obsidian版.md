@@ -21,6 +21,7 @@ tags:
 作者：Aix，极道工作室  
 定位：零基础教学教程 · 赛场纸质速查手册 · 出版预备稿 · Obsidian 单文件版  
 对应 PDF：`results/蓝桥杯FPGA开发教程_详细注释版.pdf`
+真题复盘索引：[[蓝桥杯FPGA真题复盘_Obsidian索引]]
 
 > [!NOTE] 使用说明
 > 这个文件是给 Obsidian 阅读、搜索、批注和复习用的 Markdown 教程版。完整排版、扫描题面图片、页脚总页数、PDF 书签和纸质装订效果以 PDF 为准。

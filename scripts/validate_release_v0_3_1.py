@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PDF_PATH = ROOT / "results" / "蓝桥杯FPGA开发教程_详细注释版.pdf"
 ZIP_PATH = ROOT / "results" / "lanqiao-fpga-textbook-v0.3.1.zip"
 OBSIDIAN_MD = ROOT / "蓝桥杯FPGA竞赛教程_Obsidian版.md"
+EXAM_MD = ROOT / "蓝桥杯FPGA真题复盘_Obsidian索引.md"
 
 REQUIRED_DOCS = [
     ROOT / "CHANGELOG.md",
@@ -20,6 +21,7 @@ REQUIRED_DOCS = [
     ROOT / "PRINT_QA_v0.3.1.md",
     ROOT / "PUBLISH_RUNBOOK_v0.3.1.md",
     OBSIDIAN_MD,
+    EXAM_MD,
 ]
 
 PDF_KEYWORDS = [
@@ -43,6 +45,17 @@ MD_KEYWORDS = [
     "> [!TIP]",
     "> [!WARNING]",
     "## 20 高频检索关键词",
+]
+
+EXAM_MD_KEYWORDS = [
+    "第十六届省赛真题",
+    "第十六届模拟试题 I",
+    "第十六届模拟试题 II",
+    "第十六届模拟试题 III",
+    "第十六届国赛题",
+    "第十七届模拟考试 I",
+    "第十七届模拟考试 II",
+    "提交前统一检查",
 ]
 
 
@@ -90,6 +103,10 @@ def validate_docs() -> None:
     missing_md = [kw for kw in MD_KEYWORDS if kw not in text]
     if missing_md:
         fail(f"Obsidian markdown missing markers: {missing_md}")
+    exam_text = EXAM_MD.read_text(encoding="utf-8")
+    missing_exam = [kw for kw in EXAM_MD_KEYWORDS if kw not in exam_text]
+    if missing_exam:
+        fail(f"Exam Obsidian index missing markers: {missing_exam}")
     ok("Release docs and Obsidian markdown validated")
 
 
@@ -107,6 +124,7 @@ def validate_zip(zip_path: Path) -> None:
         "PRINT_QA_v0.3.1.md",
         "PUBLISH_RUNBOOK_v0.3.1.md",
         "蓝桥杯FPGA竞赛教程_Obsidian版.md",
+        "蓝桥杯FPGA真题复盘_Obsidian索引.md",
     ]
     missing = [name for name in expected if not any(item.endswith(name) for item in names)]
     if missing:

@@ -65,6 +65,7 @@ print('missing=', [x for x in needles if x not in text])
 $releaseFiles = @(
   'README.md',
   '蓝桥杯FPGA竞赛教程_Obsidian版.md',
+  '蓝桥杯FPGA真题复盘_Obsidian索引.md',
   'CHANGELOG.md',
   'RELEASE_NOTES_v0.3.1.md',
   'PRINT_QA_v0.3.1.md',
