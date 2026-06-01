@@ -196,6 +196,8 @@ class CoverFrame(Flowable):
             c.rect(x, y, 3*mm, 3*mm, fill=1, stroke=0)
 
 # ==================== 页眉页脚 ====================
+total_pages = 0  # 全局总页数，由第一遍构建后设置
+
 def header_footer(canvas, doc):
     canvas.saveState()
     # 页眉装饰线
@@ -213,10 +215,11 @@ def header_footer(canvas, doc):
     canvas.setStrokeColor(C['border'])
     canvas.setLineWidth(0.8)
     canvas.line(2*cm, 2*cm, A4[0]-2*cm, 2*cm)
-    # 页码居中
+    # 页码居中（含总页数）
     canvas.setFont("SimHei", 9)
     canvas.setFillColor(C['secondary'])
-    canvas.drawCentredString(A4[0]/2, 1.4*cm, f"— {doc.page} —")
+    total_str = f" / {total_pages}" if total_pages else ""
+    canvas.drawCentredString(A4[0]/2, 1.4*cm, f"— {doc.page}{total_str} —")
     canvas.restoreState()
 
 def cover_header_footer(canvas, doc):
@@ -1893,7 +1896,9 @@ def main():
                              leftMargin=1.5*cm, rightMargin=1.5*cm,
                              topMargin=2*cm, bottomMargin=2.5*cm)
     doc1.build(list(content_story), onFirstPage=cover_header_footer, onLaterPages=header_footer)
-    print(f"Pass 1 done, page map: {chapter_pages}")
+    global total_pages
+    total_pages = doc1.page
+    print(f"Pass 1 done, page map: {chapter_pages}, total pages: {total_pages}")
     del content_story
     del doc1
     gc.collect()
